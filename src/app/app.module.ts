@@ -12,6 +12,12 @@ import { CustomerComponent } from './customer/customer.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { UxComponent } from './ux/ux.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { WebDesignComponent } from './web-design/web-design.component';
+import { ProfileComponent } from './profile/profile.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +27,13 @@ import { LoginComponent } from './login/login.component';
     CustomerComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    PortfolioComponent,
+    UxComponent,
+    ShoppingCartComponent,
+    WebDesignComponent,
+    ProfileComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
