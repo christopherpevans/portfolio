@@ -48,6 +48,9 @@
         <a class="nav-link" *ngIf="user"  (click)="logout()">Logout</a>
       </li>
       <li class="nav-item">
+          <a class="nav-link" routerLink="/admin" routerLinkActive="active">Admin</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" *ngIf="user"  routerLink="/dashboard"  matBadge="{{badgeCount}}"
         matBadgeColor="warn">Dashboard</a>
       </li>

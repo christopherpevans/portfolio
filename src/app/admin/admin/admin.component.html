@@ -1,8 +1,11 @@
-<h3>ADMIN</h3>
-<nav>
-  <a routerLink="./" routerLinkActive="active"
-    [routerLinkActiveOptions]="{ exact: true }">Dashboard</a>
-  <a routerLink="./crises" routerLinkActive="active">Manage Crises</a>
-  <a routerLink="./heroes" routerLinkActive="active">Manage Heroes</a>
-</nav>
-<router-outlet></router-outlet>
+<div class="container">
+  <h3>ADMIN</h3>
+  <nav>
+    <a routerLink="./" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Dashboard</a>
+    <a routerLink="./contacts" routerLinkActive="active">Manage Contacts</a>
+    <a routerLink="./customers" routerLinkActive="active">Manage Customers</a>
+    <a routerLink="./products" routerLinkActive="active">Manage Products</a>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>
