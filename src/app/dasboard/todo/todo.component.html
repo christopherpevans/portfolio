@@ -1,0 +1,28 @@
+<div class="container">
+  <form (ngSubmit)="addTodo($event)">
+    <div class="example-container">
+      <mat-form-field style="margin-right: 5px">
+        <input matInput mat-raised-button placeholder="Add ToDo" [(ngModel)]="model.name" name="name">
+      </mat-form-field>
+      <button mat-button mat-raised-button color="primary">Add ToDo</button>
+    </div>
+  </form>
+
+  <div cdkDropListGroup>
+    <div class="example-container">
+      <h2>To do</h2>
+
+      <div cdkDropList [cdkDropListData]="todo" class="example-list" (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+      </div>
+    </div>
+
+    <div class="example-container">
+      <h2>Done</h2>
+
+      <div cdkDropList [cdkDropListData]="done" class="example-list" (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+      </div>
+    </div>
+  </div>
+</div>

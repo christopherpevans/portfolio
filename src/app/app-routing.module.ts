@@ -10,12 +10,15 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { WebDesignComponent } from './web-design/web-design.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
+import { DashboardHomeComponent } from './dashboard/dashboard-home/dashboard-home.component';
+import { TodoComponent } from './dasboard/todo/todo.component';
+import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
 
 const routes: Routes = [
 
   { path: '', component: HomeComponent},
   { path: 'portfolio', component: PortfolioComponent },
-  // { path: 'dashboard', component: DashboardComponent},
   { path: 'contact', component: ContactComponent },
   { path: 'customer', component: CustomerComponent },
   // { path: 'todo', component: TodoComponent, canActivate: [AuthGuard] },
@@ -29,7 +32,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes),
+  DashboardRoutingModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

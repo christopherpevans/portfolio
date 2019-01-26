@@ -22,8 +22,22 @@ export class ContactComponent implements OnInit {
   minDate: any;
   date: Date;
 
-  constructor() { }
+  constructor(public snackBar: MatSnackBar,
+    private router: Router,
+    private dataService: DataService) { }
+
   events: string[] = [];
+
+  onSubmit() {
+    this.submitted = true;
+    this.snackBar.openFromComponent(NotificationComponent, {
+      duration: 2000,
+    });
+    this.dataService.addContact(this.model)
+    .subscribe(contact => this.contact.push(this.model));
+    this.router.navigate(['/']);
+  }
+
   ngOnInit() {
     this.date = new Date();
     this.minDate = this.date;
@@ -34,3 +48,14 @@ export class ContactComponent implements OnInit {
   }
 
 }
+
+@Component({
+  selector: 'app-snack-bar-component',
+  templateUrl: 'snack-bar-component.html',
+  styles: [`
+    .example-pizza-party {
+      color: #00FF00;
+    }
+  `],
+})
+export class NotificationComponent {}

@@ -1,0 +1,17 @@
+<div class="container text-center">
+  <h2>Dashboard Center</h2>
+</div>
+<div class="backround">
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="push" style="background-color: #001a33;">
+      <button mat-stroked-button color="accent" [routerLink]="['/dashboard/todo']" routerLinkActive="router-link-active">Todo</button>
+      <button mat-stroked-button color="accent" [routerLink]="['/dashboard']" routerLinkActive="router-link-active">Dashboard</button>
+    </mat-drawer>
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        <i class="fas fa-bars"></i>
+      </button>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-container>
+</div>
