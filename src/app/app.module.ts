@@ -28,6 +28,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
 import { TodoComponent } from './dasboard/todo/todo.component';
 import { DashboardHomeComponent } from './dashboard/dashboard-home/dashboard-home.component';
+import { AdminModule } from './admin/admin.module';
 
 
 @NgModule({
@@ -65,7 +66,8 @@ import { DashboardHomeComponent } from './dashboard/dashboard-home/dashboard-hom
     MatIconModule,
     MatButtonModule,
     LayoutModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    AdminModule
   ],
   entryComponents: [NotificationComponent],
   providers: [DataService],

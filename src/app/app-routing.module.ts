@@ -14,6 +14,7 @@ import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { DashboardHomeComponent } from './dashboard/dashboard-home/dashboard-home.component';
 import { TodoComponent } from './dasboard/todo/todo.component';
 import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
+import { AdminRoutingModule } from './admin/admin-routing.module';
 
 const routes: Routes = [
 
@@ -33,7 +34,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes),
-  DashboardRoutingModule],
+  DashboardRoutingModule,
+  AdminRoutingModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
