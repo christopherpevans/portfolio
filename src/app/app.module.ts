@@ -13,7 +13,7 @@ import { ContactComponent, NotificationComponent } from './contact/contact.compo
 import { CustomerComponent } from './customer/customer.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './auth/login/login.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { UxComponent } from './ux/ux.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
@@ -29,6 +29,8 @@ import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
 import { TodoComponent } from './dasboard/todo/todo.component';
 import { DashboardHomeComponent } from './dashboard/dashboard-home/dashboard-home.component';
 import { AdminModule } from './admin/admin.module';
+import { AuthGuard } from './auth/auth.guard';
+import { AuthModule } from './auth/auth.module';
 
 
 @NgModule({
@@ -40,7 +42,6 @@ import { AdminModule } from './admin/admin.module';
     CustomerComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent,
     PortfolioComponent,
     UxComponent,
     ShoppingCartComponent,
@@ -67,7 +68,8 @@ import { AdminModule } from './admin/admin.module';
     MatButtonModule,
     LayoutModule,
     DashboardRoutingModule,
-    AdminModule
+    AdminModule,
+    AuthModule
   ],
   entryComponents: [NotificationComponent],
   providers: [DataService],
