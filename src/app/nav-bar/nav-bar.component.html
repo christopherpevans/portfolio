@@ -45,12 +45,13 @@
         <a class="nav-link" *ngIf="authService.isLoggedIn"  (click)="logout()">Logout</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" *ngIf="authService.isLoggedIn" routerLink="/admin" routerLinkActive="active">Admin</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" *ngIf="authService.isLoggedIn"  routerLink="/dashboard"  matBadge="{{badgeCount}}"
         matBadgeColor="warn">Dashboard</a>
       </li>
+      <li class="nav-item">
+          <a class="nav-link" *ngIf="authService.isLoggedIn" routerLink="/admin" routerLinkActive="active">Admin</a>
+      </li>
+
 
     </ul>
     <div class="nav-item">

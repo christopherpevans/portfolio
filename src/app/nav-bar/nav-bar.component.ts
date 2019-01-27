@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-// import { DataService } from '../services/data.service';
 import { catchError, tap } from 'rxjs/operators';
 import { AuthService } from '../auth/auth.service';
 import { Router } from '@angular/router';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -16,21 +16,22 @@ export class NavBarComponent implements OnInit {
    user = localStorage.getItem('currentUser');
 
   constructor(public authService: AuthService,
-              private router: Router) { }
+              private router: Router,
+              private dataService: DataService) { }
 
 
 
   ngOnInit() {
 
-    // this.dataService.getContacts()
-    //   .subscribe(data => {
-    //     if (data) {
-    //       this.badgeCount = data.length;
-    //     } else {
-    //       this.badgeCount = 0;
-    //     }
+    this.dataService.getContacts()
+      .subscribe(data => {
+        if (data) {
+          this.badgeCount = data.length;
+        } else {
+          this.badgeCount = 0;
+        }
 
-    //   });
+      });
   }
 
   logout() {
