@@ -12,4 +12,11 @@ export class ManageCustomersComponent implements OnInit {
   ngOnInit() {
   }
 
+  cancel() {
+
+  }
+
+  save() {
+
+  }
 }

@@ -12,4 +12,12 @@ export class ManageProductsComponent implements OnInit {
   ngOnInit() {
   }
 
+  cancel() {
+
+  }
+
+  save() {
+
+  }
+
 }

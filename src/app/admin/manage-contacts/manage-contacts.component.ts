@@ -12,4 +12,11 @@ export class ManageContactsComponent implements OnInit {
   ngOnInit() {
   }
 
+  cancel() {
+
+  }
+
+  save() {
+
+  }
 }
