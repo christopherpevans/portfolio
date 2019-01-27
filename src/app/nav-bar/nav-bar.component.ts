@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 // import { DataService } from '../services/data.service';
 import { catchError, tap } from 'rxjs/operators';
-// import { AuthService } from '../services/auth.service';
+import { AuthService } from '../auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -14,7 +15,8 @@ export class NavBarComponent implements OnInit {
   inCart = 0;
    user = localStorage.getItem('currentUser');
 
-  constructor() { }
+  constructor(public authService: AuthService,
+              private router: Router) { }
 
 
 
@@ -32,6 +34,7 @@ export class NavBarComponent implements OnInit {
   }
 
   logout() {
-    // this.authService.logout();
+    this.authService.logout();
+    this.router.navigate(['/']);
   }
 }
