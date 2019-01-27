@@ -6,6 +6,7 @@ import { ManageContactsComponent } from './manage-contacts/manage-contacts.compo
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { ManageProductsComponent } from './manage-products/manage-products.component';
 import { AuthGuard } from '../auth/auth.guard';
+import { CanDeactivateGuard } from '../can-deactivate.guard';
 
 const adminRoutes: Routes = [
   {
@@ -15,10 +16,11 @@ const adminRoutes: Routes = [
     children: [
       {
         path: '',
+        canActivateChild: [AuthGuard],
         children: [
           { path: 'customers', component: ManageCustomersComponent },
           { path: 'contacts', component: ManageContactsComponent },
-          { path: 'products', component: ManageProductsComponent },
+          { path: 'products', component: ManageProductsComponent, canDeactivate: [CanDeactivateGuard] },
           { path: '', component: AdminDashboardComponent }
         ]
       }

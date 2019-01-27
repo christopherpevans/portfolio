@@ -16,19 +16,18 @@ import { TodoComponent } from './dasboard/todo/todo.component';
 import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
 import { AdminRoutingModule } from './admin/admin-routing.module';
 import { AuthRoutingModule } from './auth/auth-routing.module';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
 
   { path: '', component: HomeComponent},
   { path: 'portfolio', component: PortfolioComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'customer', component: CustomerComponent },
-  // { path: 'todo', component: TodoComponent, canActivate: [AuthGuard] },
-  // { path: 'login', component: LoginComponent },
+  { path: 'customer', component: CustomerComponent, canActivate: [AuthGuard], },
   { path: 'ux', component: UxComponent },
   { path: 'cart', component: ShoppingCartComponent },
   { path: 'pricing/webdesign', component: WebDesignComponent },
-  { path: 'profile', component: ProfileComponent },
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard], },
   // { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
