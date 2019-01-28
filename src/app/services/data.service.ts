@@ -14,6 +14,7 @@ export class DataService {
 
   private customerUrl = 'https://contacts-api-app.herokuapp.com/customers';
   public model: Contact[];
+  public customer: Customer[];
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -38,7 +39,7 @@ export class DataService {
   // GET CUSTOMER
   getCustomers(): Observable<Customer[]> {
     return this.http.get<Customer[]>(this.customerUrl).pipe(
-      tap(data => this.model = data));
+      tap(data => this.customer = data));
   }
 
   // ADD CUSTOMER
