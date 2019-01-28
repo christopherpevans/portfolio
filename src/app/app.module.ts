@@ -9,6 +9,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
+import { GtagModule } from 'angular-gtag';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -76,7 +77,8 @@ import { AngularFirestore } from 'angularfire2/firestore';
     AuthModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    GtagModule.forRoot({ trackingId: 'UA-132076132-1', trackPageviews: true })
   ],
   entryComponents: [NotificationComponent],
   providers: [DataService,

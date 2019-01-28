@@ -5,6 +5,7 @@ import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { ManageProductsComponent } from './admin/manage-products/manage-products.component';
 import { Observable } from 'rxjs';
+import { Gtag } from 'angular-gtag';
 
 interface Product {
   name: string;
@@ -21,10 +22,13 @@ export class AppComponent implements OnInit {
   user = null;
   productCollection: AngularFirestoreCollection<Product>;
   Products: Observable<Product[]>;
-  products;
+  products: Observable<Product[]>;
 
   constructor(private auth: AuthService,
-              public afs: AngularFirestore) { }
+              public afs: AngularFirestore,
+              public gtag: Gtag) {
+                gtag.pageview();
+              }
 
   ngOnInit() {
     this.productCollection = this.afs.collection('products');
