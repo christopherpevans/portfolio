@@ -26,7 +26,7 @@ export class DataService {
 
   // GET CUSTOMER
   getContacts(): Observable<Contact[]> {
-    return this.http.get<Contact[]>(this.contactUrl).pipe(tap(data => console.log('All: ' + JSON.stringify(data))),
+    return this.http.get<Contact[]>(this.contactUrl).pipe(
       tap(data => this.model = data));
   }
 
@@ -37,7 +37,7 @@ export class DataService {
 
   // GET CUSTOMER
   getCustomers(): Observable<Customer[]> {
-    return this.http.get<Customer[]>(this.customerUrl).pipe(tap(data => console.log('All: ' + JSON.stringify(data))),
+    return this.http.get<Customer[]>(this.customerUrl).pipe(
       tap(data => this.model = data));
   }
 

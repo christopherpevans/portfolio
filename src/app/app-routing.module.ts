@@ -23,11 +23,11 @@ const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'portfolio', component: PortfolioComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'customer', component: CustomerComponent, canActivate: [AuthGuard], },
+  { path: 'customer', component: CustomerComponent, canActivate: [AuthGuard] },
   { path: 'ux', component: UxComponent },
-  { path: 'cart', component: ShoppingCartComponent },
+  { path: 'cart', component: ShoppingCartComponent, canActivate: [AuthGuard] },
   { path: 'pricing/webdesign', component: WebDesignComponent },
-  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard], },
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   // { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
