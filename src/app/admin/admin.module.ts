@@ -7,12 +7,16 @@ import { AdminComponent } from './admin/admin.component';
 import { ManageCustomersComponent } from './manage-customers/manage-customers.component';
 import { ManageContactsComponent } from './manage-contacts/manage-contacts.component';
 import { ManageProductsComponent } from './manage-products/manage-products.component';
+import { FormsModule } from '@angular/forms';
+import { MaterialModule } from '../shared/material.module';
 
 @NgModule({
   declarations: [AdminDashboardComponent, AdminComponent, ManageCustomersComponent, ManageContactsComponent, ManageProductsComponent],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    FormsModule,
+    MaterialModule
   ]
 })
 export class AdminModule { }
