@@ -34,6 +34,7 @@ import { DashboardHomeComponent } from './dashboard/dashboard-home/dashboard-hom
 import { AdminModule } from './admin/admin.module';
 import { AuthGuard } from './auth/auth.guard';
 import { AuthModule } from './auth/auth.module';
+import { AngularFirestore } from 'angularfire2/firestore';
 
 
 @NgModule({
@@ -78,7 +79,8 @@ import { AuthModule } from './auth/auth.module';
     AngularFireAuthModule
   ],
   entryComponents: [NotificationComponent],
-  providers: [DataService],
+  providers: [DataService,
+              AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
