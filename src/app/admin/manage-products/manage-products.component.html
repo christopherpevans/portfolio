@@ -27,7 +27,8 @@
                     </a>
                   </td>
                   <td>{{ product.description }}</td>
-                  <td>{{ product.price | currency:'USD':'symbol':'1.2-2' }}</td>
+                  <td>{{ product.price | currency:'USD':'symbol':'1.2-2'}}</td>
+                  <td><button class="btn btn-danger" (click)="remove(product)">X</button></td>
                 </tr>
               </tbody>
             </table>
@@ -44,15 +45,15 @@
               <input type="text" matInput #input minlength="3" placeholder="Name" required [(ngModel)]="model.name"
                 name="name">
             </mat-form-field>
-<br>
+            <br>
             <mat-form-field>
               <input matInput placeholder="Image" required [(ngModel)]="model.image" name="image">
             </mat-form-field>
-<br>
+            <br>
             <mat-form-field>
               <input matInput placeholder="Price" [(ngModel)]="model.price" name="price">
             </mat-form-field>
-<br>
+            <br>
             <mat-form-field hintLabel="Max 500 characters">
               <textarea matInput placeholder="Description" #input maxlength="500" [(ngModel)]="model.description" name="description"></textarea>
               <mat-hint align="end">{{input.value?.length || 0}}/500</mat-hint>
