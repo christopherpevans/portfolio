@@ -11,10 +11,11 @@ export class ManageCustomersComponent implements OnInit {
 
   constructor(private dataService: DataService) { }
 
-  displayedColumns: string[] = ['id', 'name', 'email', 'phone', 'types', 'description', 'created_at'];
+  displayedColumns: string[] = ['id', 'name', 'email', 'phone', 'types', 'picker', 'total', 'notes'];
   dataSource = new MatTableDataSource([]);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -25,6 +26,7 @@ export class ManageCustomersComponent implements OnInit {
     this.dataService.getCustomers()
     .subscribe(data => this.dataSource.data = data);
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
   cancel() {
