@@ -1,57 +1,59 @@
+<div class="container">
+  <div class="mat-elevation-z8">
+    <div class="container">
+      <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
+    </div>
+    <table mat-table #contactSort="matSort" [dataSource]="dataSource" matSort class="mat-elevation-z8">
 
-<div class="mat-elevation-z8">
-  <mat-form-field>
-    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-  </mat-form-field>
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+        <td mat-cell *matCellDef="let customer" class="click"> {{customer.id}} </td>
+      </ng-container>
 
-  <table mat-table #contactSort="matSort" [dataSource]="dataSource" matSort class="mat-elevation-z8">
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+        <td mat-cell *matCellDef="let customer" class="click"> {{customer.name}} </td>
+      </ng-container>
 
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
-      <td mat-cell *matCellDef="let customer" class="click"> {{customer.id}} </td>
-    </ng-container>
+      <!-- Email Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+        <td mat-cell *matCellDef="let customer" class="click"> {{customer.email}} </td>
+      </ng-container>
 
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
-      <td mat-cell *matCellDef="let customer" class="click"> {{customer.name}} </td>
-    </ng-container>
+      <!-- Number Column -->
+      <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Phone Number </th>
+        <td mat-cell *matCellDef="let customer" class="click"> {{customer.phone}} </td>
+      </ng-container>
 
-    <!-- Email Column -->
-    <ng-container matColumnDef="email">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
-      <td mat-cell *matCellDef="let customer" class="click"> {{customer.email}} </td>
-    </ng-container>
+      <!-- Service Column -->
+      <ng-container matColumnDef="types">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Service </th>
+        <td mat-cell *matCellDef="let customer" class="click"> {{customer.types}} </td>
+      </ng-container>
 
-    <!-- Number Column -->
-    <ng-container matColumnDef="phone">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Phone Number </th>
-      <td mat-cell *matCellDef="let customer" class="click"> {{customer.phone}} </td>
-    </ng-container>
+      <!-- Description Column -->
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
+        <td mat-cell *matCellDef="let customer" class="click"> {{customer.description}} </td>
+      </ng-container>
 
-    <!-- Service Column -->
-    <ng-container matColumnDef="types">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Service </th>
-      <td mat-cell *matCellDef="let customer" class="click"> {{customer.types}} </td>
-    </ng-container>
+      <!-- Created_date Column -->
+      <ng-container matColumnDef="created_at">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Created on </th>
+        <td mat-cell *matCellDef="let customer" class="click"> {{customer.created_at | date }} </td>
+      </ng-container>
 
-    <!-- Description Column -->
-    <ng-container matColumnDef="description">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
-      <td mat-cell *matCellDef="let customer" class="click"> {{customer.description}} </td>
-    </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
 
-    <!-- Created_date Column -->
-    <ng-container matColumnDef="created_at">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Created on </th>
-      <td mat-cell *matCellDef="let customer" class="click"> {{customer.created_at | date }} </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-
-  <!-- Paginator -->
-  <mat-paginator #contactPaginator="matPaginator" [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
-  </mat-paginator>
+    <!-- Paginator -->
+    <mat-paginator #contactPaginator="matPaginator" [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+    </mat-paginator>
+  </div>
 </div>
