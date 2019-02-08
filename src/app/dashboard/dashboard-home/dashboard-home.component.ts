@@ -14,18 +14,18 @@ export class DashboardHomeComponent {
     map(({ matches }) => {
       if (matches) {
         return [
-          { title: 'Card 1', cols: 1, rows: 1 },
-          { title: 'Card 2', cols: 1, rows: 1 },
-          { title: 'Card 3', cols: 1, rows: 1 },
-          { title: 'Card 4', cols: 1, rows: 1 }
+          { title: 'Customers', cols: 2, rows: 1 },
+          { title: 'Analytics', cols: 1, rows: 1 },
+          { title: 'Contacts', cols: 1, rows: 2 },
+          { title: 'Sales', cols: 1, rows: 1 }
         ];
       }
 
       return [
-        { title: 'Card 1', cols: 2, rows: 1 },
-        { title: 'Card 2', cols: 1, rows: 1 },
-        { title: 'Card 3', cols: 1, rows: 2 },
-        { title: 'Card 4', cols: 1, rows: 1 }
+        { title: 'Customers', cols: 2, rows: 1 },
+        { title: 'Analytics', cols: 1, rows: 1 },
+        { title: 'Contacts', cols: 1, rows: 2 },
+        { title: 'Sales', cols: 1, rows: 1 }
       ];
     })
   );
