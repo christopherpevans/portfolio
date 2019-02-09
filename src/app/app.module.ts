@@ -4,7 +4,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { DragDropModule } from '@angular/cdk/drag-drop';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -27,17 +26,11 @@ import { ProfileComponent } from './profile/profile.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { DataService } from './services/data.service';
-import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
-import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
-import { LayoutModule } from '@angular/cdk/layout';
-import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
-import { TodoComponent } from './dasboard/todo/todo.component';
-import { DashboardHomeComponent } from './dashboard/dashboard-home/dashboard-home.component';
 import { AdminModule } from './admin/admin.module';
-import { AuthGuard } from './auth/auth.guard';
 import { AuthModule } from './auth/auth.module';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { AddToCartComponent } from './shared/add-to-cart.component';
+
 
 
 @NgModule({
@@ -56,9 +49,6 @@ import { AddToCartComponent } from './shared/add-to-cart.component';
     WebDesignComponent,
     ProfileComponent,
     PageNotFoundComponent,
-    DashboardComponent,
-    TodoComponent,
-    DashboardHomeComponent
   ],
   imports: [
     BrowserModule,
@@ -68,14 +58,6 @@ import { AddToCartComponent } from './shared/add-to-cart.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    DragDropModule,
-    MatGridListModule,
-    MatCardModule,
-    MatMenuModule,
-    MatIconModule,
-    MatButtonModule,
-    LayoutModule,
-    DashboardRoutingModule,
     AdminModule,
     AuthModule,
     AngularFireModule.initializeApp(environment.firebase),

@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 import { Todo } from './todo';
 
+
+
 @Component({
   selector: 'app-todo',
-  templateUrl: './todo.component.html',
-  styleUrls: ['./todo.component.scss']
+  templateUrl: './admin-todo.component.html',
+  styleUrls: ['./admin-todo.component.scss']
 })
 export class TodoComponent {
 

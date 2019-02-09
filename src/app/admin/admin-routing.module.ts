@@ -7,6 +7,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { ManageProductsComponent } from './manage-products/manage-products.component';
 import { AuthGuard } from '../auth/auth.guard';
 import { CanDeactivateGuard } from '../can-deactivate.guard';
+import { TodoComponent } from './admin/dashboard-todo/admin-todo.component';
 
 const adminRoutes: Routes = [
   {
@@ -21,6 +22,7 @@ const adminRoutes: Routes = [
           { path: 'customers', component: ManageCustomersComponent },
           { path: 'contacts', component: ManageContactsComponent },
           { path: 'products', component: ManageProductsComponent, canDeactivate: [CanDeactivateGuard] },
+          { path: 'todo', component: TodoComponent },
           { path: '', component: AdminDashboardComponent }
         ]
       }

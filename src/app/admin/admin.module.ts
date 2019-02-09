@@ -9,9 +9,17 @@ import { ManageContactsComponent } from './manage-contacts/manage-contacts.compo
 import { ManageProductsComponent } from './manage-products/manage-products.component';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '../shared/material.module';
+import { TodoComponent } from './admin/dashboard-todo/admin-todo.component';
 
 @NgModule({
-  declarations: [AdminDashboardComponent, AdminComponent, ManageCustomersComponent, ManageContactsComponent, ManageProductsComponent],
+  declarations: [
+    AdminDashboardComponent,
+    AdminComponent,
+    ManageCustomersComponent,
+    ManageContactsComponent,
+    ManageProductsComponent,
+    TodoComponent
+  ],
   imports: [
     CommonModule,
     AdminRoutingModule,

@@ -45,17 +45,13 @@
         <a class="nav-link" *ngIf="authService.isLoggedIn"  (click)="logout()">Logout</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" *ngIf="authService.isLoggedIn"  routerLink="/dashboard"  matBadge="{{badgeCount}}"
-        matBadgeColor="warn">Dashboard</a>
+          <a class="nav-link" *ngIf="authService.isLoggedIn" routerLink="/admin" routerLinkActive="active" matBadge="{{badgeCount}}"
+          matBadgeColor="warn">Admin</a>
       </li>
-      <li class="nav-item">
-          <a class="nav-link" *ngIf="authService.isLoggedIn" routerLink="/admin" routerLinkActive="active">Admin</a>
-      </li>
-
 
     </ul>
     <div class="nav-item">
-     <a routerLink="/cart"> <i class="fas fa-shopping-cart fa-lg text-white" matBadge="{{cartService.cart.length}}" matBadgeColor="warn"></i></a>
+     <a routerLink="/cart" class="nav-link"> <i class="fas fa-shopping-cart fa-lg text-white" matBadge="{{cartService.cart.length}}" matBadgeColor="warn"></i></a>
     </div>
   </div>
 
