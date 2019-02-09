@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit, OnChanges, ViewChild } from '@angular/core';
 import * as firebase from 'firebase/app';
 import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
 import {
@@ -32,11 +32,13 @@ export class ManageProductsComponent implements OnInit, OnChanges {
     'Package Deal (Multiple Services)'
   ];
 
+  @ViewChild('customerForm') form: any;
+
   constructor(public afs: AngularFirestore, public snackBar: MatSnackBar) {}
 
   ngOnInit() {
     this.productCollection = this.afs.collection('products');
-    console.log((this.products = this.productCollection.valueChanges()));
+    (this.products = this.productCollection.valueChanges());
   }
 
   onSubmit() {
@@ -44,6 +46,7 @@ export class ManageProductsComponent implements OnInit, OnChanges {
       .collection('products')
       .doc(this.model.name)
       .set(Object.assign({}, this.model));
+      this.form.resetForm();
   }
 
   remove(product: { name: string }) {
