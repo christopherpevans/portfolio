@@ -3,6 +3,7 @@ import { Contact } from '../models/contact';
 import { MatDatepickerInputEvent, MatSnackBar } from '@angular/material';
 import { Router } from '@angular/router';
 import { DataService } from '../services/data.service';
+import { FormSubmissionComponent } from '../shared/form-submission.component';
 
 @Component({
   selector: 'app-contact',
@@ -30,7 +31,7 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    this.snackBar.openFromComponent(NotificationComponent, {
+    this.snackBar.openFromComponent(FormSubmissionComponent, {
       duration: 2000,
     });
     this.dataService.addContact(this.model)
@@ -49,13 +50,4 @@ export class ContactComponent implements OnInit {
 
 }
 
-@Component({
-  selector: 'app-snack-bar-component',
-  templateUrl: 'snack-bar-component.html',
-  styles: [`
-    .example-pizza-party {
-      color: #00FF00;
-    }
-  `],
-})
-export class NotificationComponent {}
+

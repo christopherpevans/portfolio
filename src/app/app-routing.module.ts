@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'customer', component: CustomerComponent, canActivate: [AuthGuard] },
   { path: 'ux', component: UxComponent },
-  { path: 'cart', component: ShoppingCartComponent, canActivate: [AuthGuard] },
+  { path: 'cart', component: ShoppingCartComponent },
   { path: 'pricing/webdesign', component: WebDesignComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   // { path: '', redirectTo: '/home', pathMatch: 'full' },

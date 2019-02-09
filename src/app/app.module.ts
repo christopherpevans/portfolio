@@ -14,10 +14,11 @@ import { GtagModule } from 'angular-gtag';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MaterialModule } from './shared/material.module';
-import { ContactComponent, NotificationComponent } from './contact/contact.component';
+import { ContactComponent } from './contact/contact.component';
 import { CustomerComponent } from './customer/customer.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { FormSubmissionComponent } from './shared/form-submission.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { UxComponent } from './ux/ux.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
@@ -36,14 +37,16 @@ import { AdminModule } from './admin/admin.module';
 import { AuthGuard } from './auth/auth.guard';
 import { AuthModule } from './auth/auth.module';
 import { AngularFirestore } from 'angularfire2/firestore';
+import { AddToCartComponent } from './shared/add-to-cart.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    AddToCartComponent,
     NavBarComponent,
     ContactComponent,
-    NotificationComponent,
+    FormSubmissionComponent,
     CustomerComponent,
     FooterComponent,
     HomeComponent,
@@ -80,7 +83,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
     AngularFireAuthModule,
     GtagModule.forRoot({ trackingId: 'UA-132076132-1', trackPageviews: true })
   ],
-  entryComponents: [NotificationComponent],
+  entryComponents: [FormSubmissionComponent, AddToCartComponent],
   providers: [DataService,
               AngularFirestore],
   bootstrap: [AppComponent]
