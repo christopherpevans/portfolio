@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Inject } from '@angular/core';
 import * as firebase from 'firebase/app';
 import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
 import {
@@ -8,15 +8,16 @@ import {
   fromDocRef
 } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar, MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Product } from 'src/app/models/product';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-manage-products',
   templateUrl: './manage-products.component.html',
   styleUrls: ['./manage-products.component.scss']
 })
-export class ManageProductsComponent implements OnInit, OnChanges {
+export class ManageProductsComponent implements OnInit {
   id: number;
   model = new Product('', '', '', null);
   productCollection: AngularFirestoreCollection<Product>;
@@ -34,7 +35,9 @@ export class ManageProductsComponent implements OnInit, OnChanges {
 
   @ViewChild('customerForm') form: any;
 
-  constructor(public afs: AngularFirestore, public snackBar: MatSnackBar) {}
+  constructor(public afs: AngularFirestore,
+              public snackBar: MatSnackBar,
+              public dialog: MatDialog) {}
 
   ngOnInit() {
     this.productCollection = this.afs.collection('products');
@@ -49,20 +52,37 @@ export class ManageProductsComponent implements OnInit, OnChanges {
       this.form.resetForm();
   }
 
-  remove(product: { name: string }) {
-    this.afs
-      .collection('products')
-      .doc(product.name)
-      .delete()
-      .then(function() {
-        console.log('Document successfully deleted!');
-      })
-      .catch(function(error) {
-        console.error('Error removing document: ', error);
-      });
+  openDialog(product): void {
+    const dialogRef = this.dialog.open(DialogOverviewExampleDialogComponent, {
+      width: '250px',
+      // data: {name: this.name, animal: this.animal}
+      data: product
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      // console.log('The dialog was closed');
+
+    });
+
+  }}
+@Component({
+  selector: 'app-dialog-overview-example-dialog',
+  templateUrl: 'dialog-overview-example-dialog.html',
+})
+
+export class DialogOverviewExampleDialogComponent {
+
+  constructor( public productService: ProductService,
+    public dialogRef: MatDialogRef<DialogOverviewExampleDialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public data) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 
-  ngOnChanges() {
-    console.log(this.products);
+  delete(data: { name: string; }) {
+    this.productService.deleteProduct(data);
+    this.dialogRef.close();
   }
+
 }

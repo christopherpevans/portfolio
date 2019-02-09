@@ -28,7 +28,7 @@
                   </td>
                   <td>{{ product.description }}</td>
                   <td>{{ product.price | currency:'USD':'symbol':'1.2-2'}}</td>
-                  <td><button class="btn btn-danger" (click)="remove(product)">X</button></td>
+                  <td><button class="btn btn-danger" (click)="openDialog(product)">X</button></td>
                 </tr>
               </tbody>
             </table>

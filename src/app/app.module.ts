@@ -30,6 +30,7 @@ import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { AddToCartComponent } from './shared/add-to-cart.component';
+import { DialogOverviewExampleDialogComponent } from './admin/manage-products/manage-products.component';
 
 
 
@@ -49,6 +50,7 @@ import { AddToCartComponent } from './shared/add-to-cart.component';
     WebDesignComponent,
     ProfileComponent,
     PageNotFoundComponent,
+    DialogOverviewExampleDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +67,10 @@ import { AddToCartComponent } from './shared/add-to-cart.component';
     AngularFireAuthModule,
     GtagModule.forRoot({ trackingId: 'UA-132076132-1', trackPageviews: true })
   ],
-  entryComponents: [FormSubmissionComponent, AddToCartComponent],
+  entryComponents: [
+    FormSubmissionComponent,
+    AddToCartComponent,
+    DialogOverviewExampleDialogComponent],
   providers: [DataService,
               AngularFirestore],
   bootstrap: [AppComponent]
