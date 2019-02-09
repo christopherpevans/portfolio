@@ -3,6 +3,7 @@ import { catchError, tap } from 'rxjs/operators';
 import { AuthService } from '../auth/auth.service';
 import { Router } from '@angular/router';
 import { DataService } from '../services/data.service';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -12,12 +13,12 @@ import { DataService } from '../services/data.service';
 export class NavBarComponent implements OnInit {
 
   badgeCount = null;
-  inCart = 0;
    user = localStorage.getItem('currentUser');
 
   constructor(public authService: AuthService,
               private router: Router,
-              private dataService: DataService) { }
+              private dataService: DataService,
+              private cartService: CartService) { }
 
 
 

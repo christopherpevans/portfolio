@@ -45,7 +45,7 @@
             <mat-divider></mat-divider>
             <li>50% Good Faith Deposit Required to start project</li>
           </ul>
-          <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+          <button type="button" class="btn btn-lg btn-block btn-primary" (click)="total(1199)">Get started</button>
         </div>
       </div>
       <div class="card mb-4 shadow-sm">
@@ -87,7 +87,7 @@
             <mat-divider></mat-divider>
             <li>50% Good Faith Deposit Required to start project</li>
           </ul>
-          <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+          <button type="button" class="btn btn-lg btn-block btn-primary" (click)=total(1699)>Get started</button>
         </div>
       </div>
       <div class="card mb-4 shadow-sm">
@@ -129,7 +129,7 @@
             <mat-divider></mat-divider>
             <li>50% Good Faith Deposit Required to start project</li>
           </ul>
-          <button (click)="addToCart()" type="button" class="btn btn-lg btn-block btn-primary">Get Started</button>
+          <button (click)="openSnackBar()" type="button" class="btn btn-lg btn-block btn-primary">Get Started</button>
         </div>
       </div>
     </div>
