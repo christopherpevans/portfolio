@@ -1,12 +1,5 @@
 import { Component, OnInit, ViewChild, Inject } from '@angular/core';
-import * as firebase from 'firebase/app';
-import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
-import {
-  AngularFirestore,
-  AngularFirestoreCollection,
-  AngularFirestoreDocument,
-  fromDocRef
-} from 'angularfire2/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
 import { MatSnackBar, MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Product } from 'src/app/models/product';
