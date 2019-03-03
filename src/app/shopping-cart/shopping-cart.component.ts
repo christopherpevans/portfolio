@@ -14,4 +14,8 @@ export class ShoppingCartComponent implements OnInit {
     console.log(this.cartService.cart);
   }
 
+  deleteProduct(product) {
+    console.log(product);
+  }
+
 }

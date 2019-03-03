@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
   constructor(private auth: AuthService,
               public afs: AngularFirestore,
               public gtag: Gtag) {
-                gtag.pageview();
+
               }
 
   ngOnInit() {
