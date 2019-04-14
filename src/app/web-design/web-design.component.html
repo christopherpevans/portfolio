@@ -1,7 +1,7 @@
 <div class="container">
   <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     <h1 class="display-4">Website and Branding Package</h1>
-    <p class="lead text-left"><strong>Do You Need A Professional New Logo, A Responsive Website Plus A Lovely Set of Business Stationery For Your New Business? </strong><br>Our professional design packages will give your business a boost. Our cost-effective, professional logo design, branding and marketing services will enable you to start trading and to develop your business. Need a custom quote, contact us.</p>
+    <p class="lead text-left"><strong>Do you need a professional new logo, A Responsive Website plus A lovely set of business cards For Your new business? </strong><br>Our professional design packages will give your business a boost. Our cost-effective, professional logo design, branding and marketing services will enable you to develop your business. Need a custom quote, contact us.</p>
   </div>
 
   <div class="container">
@@ -13,19 +13,21 @@
         <div class="card-body">
           <h1 class="card-title pricing-card-title">{{ product.price | currency:'USD':'symbol':'1.2-2'}}</h1>
           <ul class="list-unstyled mt-3 mb-4">
-            <li>2 to 4 Logo design consecpts</li>
+            <li>{{product.logo}}</li>
             <mat-divider></mat-divider>
-            <li>Up to 2 revisions of the selected concept</li>
+            <li>{{product.revision}}</li>
             <mat-divider></mat-divider>
             <li>Professional print & web ready logo artwork files</li>
             <mat-divider></mat-divider>
             <li>Copyright ownership to the final logo</li>
             <mat-divider></mat-divider>
-            <li>5 Page Website Design</li>
+            <li>{{product.pages}}</li>
             <mat-divider></mat-divider>
             <li>1 Contact Us Form</li>
             <mat-divider></mat-divider>
             <li>Ability To Add & Edit Pages Through A Personal Login Area</li>
+            <mat-divider></mat-divider>
+            <li>{{product.description}}</li>
             <mat-divider></mat-divider>
             <li>-</li>
             <mat-divider></mat-divider>
@@ -33,7 +35,8 @@
             <mat-divider></mat-divider>
             <li>Responsive Website Tested on All Major Web Browsers plus mobile devices including iPhones and iPads</li>
             <mat-divider></mat-divider>
-            <li>-</li><br>
+            <li *ngIf="product.store">{{product.store}}</li>
+            <li *ngIf="!product.store">-</li><br>
             <mat-divider></mat-divider>
             <li>-</li>
             <mat-divider></mat-divider>
@@ -41,11 +44,11 @@
             <mat-divider></mat-divider>
             <li>-</li>
             <mat-divider></mat-divider>
-            <li>Turnaround 4-6 business weeks</li>
+            <li>{{product.time}}</li>
             <mat-divider></mat-divider>
             <li>50% Good Faith Deposit Required to start project</li>
           </ul>
-          <button type="button" class="btn btn-lg btn-block btn-primary" (click)="total(product)">Get started</button>
+          <!-- <button type="button" class="btn btn-lg btn-block btn-primary" (click)="total(product)">Get started</button> -->
         </div>
       </div>
 
@@ -56,7 +59,7 @@
         <div class="card-body">
           <h1 class="card-title pricing-card-title">$1699</h1>
           <ul class="list-unstyled mt-3 mb-4">
-            <li>3 to 5 Logo design consecpts</li>
+            <li>2 to 4 Logo design conecpts</li>
             <mat-divider></mat-divider>
             <li>Up to 3 revisions of the selected concept</li>
             <mat-divider></mat-divider>
@@ -84,7 +87,7 @@
             <mat-divider></mat-divider>
             <li>-</li>
             <mat-divider></mat-divider>
-            <li>Turnaround 5-7 business weeks</li>
+            <li>Turnaround 4-6 business weeks</li>
             <mat-divider></mat-divider>
             <li>50% Good Faith Deposit Required to start project</li>
           </ul>
@@ -98,7 +101,7 @@
         <div class="card-body">
           <h1 class="card-title pricing-card-title">$2499</h1>
           <ul class="list-unstyled mt-3 mb-4">
-            <li>3 to 5 Logo design consecpts</li>
+            <li>3 to 5 Logo design concepts</li>
             <mat-divider></mat-divider>
             <li>Up to 3 revisions of the selected concept</li>
             <mat-divider></mat-divider>
