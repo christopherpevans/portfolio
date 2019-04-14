@@ -23,7 +23,8 @@ export class WebDesignComponent implements OnInit {
               public afs: AngularFirestore) { }
 
   ngOnInit() {
-    this.productCollection = this.afs.collection('products');
+    this.productCollection = this.afs.collection('products', ref => ref.orderBy('name', 'desc'));
+
     (this.products = this.productCollection.valueChanges());
   }
 
