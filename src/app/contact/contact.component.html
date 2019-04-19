@@ -3,7 +3,7 @@
   <!-- <p>Please let us know about what service you are looking for so we can serve you. The more information, the better. Thank you.</p> -->
 <mat-card class="card">
 
-  <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
     <div class="example-container">
       <mat-form-field hintLabel="Min 3 characters">
         <input type="text" matInput #input minlength="3" placeholder="Name" required [(ngModel)]="model.name" name="name">
