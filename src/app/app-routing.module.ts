@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'customer', component: CustomerComponent, canActivate: [AuthGuard] },
   { path: 'ux', component: UxComponent },
   { path: 'cart', component: ShoppingCartComponent , canActivate: [AuthGuard] },
-  { path: 'pricing/webdesign', component: WebDesignComponent, canActivate: [AuthGuard] },
+  { path: 'pricing/webdesign', component: WebDesignComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   // { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }

@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Contact } from '../models/contact';
 import { MatDatepickerInputEvent, MatSnackBar } from '@angular/material';
 import { Router } from '@angular/router';
 import { DataService } from '../services/data.service';
 import { FormSubmissionComponent } from '../shared/form-submission.component';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -22,21 +23,21 @@ export class ContactComponent implements OnInit {
 
   minDate: any;
   date: Date;
-
   constructor(public snackBar: MatSnackBar,
     private router: Router,
     private dataService: DataService) { }
 
   events: string[] = [];
 
-  onSubmit() {
+  onSubmit(form: NgForm) {
     this.submitted = true;
     this.snackBar.openFromComponent(FormSubmissionComponent, {
       duration: 2000,
     });
     this.dataService.addContact(this.model)
     .subscribe(contact => this.contact.push(this.model));
-    this.router.navigate(['/']);
+    form.reset();
+    this.router.navigate(['pricing/webdesign']);
   }
 
   ngOnInit() {
