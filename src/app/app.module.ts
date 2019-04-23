@@ -9,6 +9,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 import { GtagModule } from 'angular-gtag';
+import { FirestoreSettingsToken} from '@angular/fire/firestore';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -65,14 +66,14 @@ import { DialogOverviewExampleDialogComponent } from './admin/manage-products/ma
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    GtagModule.forRoot({ trackingId: 'UA-132076132-1', trackPageviews: true })
+    GtagModule.forRoot({ trackingId: 'UA-138997951-1', trackPageviews: true })
   ],
   entryComponents: [
     FormSubmissionComponent,
     AddToCartComponent,
     DialogOverviewExampleDialogComponent],
   providers: [DataService,
-              AngularFirestore],
+              AngularFirestore, { provide: FirestoreSettingsToken, useValue: {} }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
