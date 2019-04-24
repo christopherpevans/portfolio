@@ -3,6 +3,7 @@ import { AuthService } from './auth/auth.service';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
 import { Gtag } from 'angular-gtag';
+import { Router, NavigationEnd } from '@angular/router';
 
 interface Product {
   name: string;
@@ -23,8 +24,14 @@ export class AppComponent implements OnInit {
 
   constructor(private auth: AuthService,
               public afs: AngularFirestore,
-              public gtag: Gtag) {
-                gtag.pageview();
+              public gtag: Gtag,
+              private router: Router) {
+                this.router.events.subscribe(event => {
+                  if (event instanceof NavigationEnd) {
+                    (<any>window).ga('set', 'page', event.urlAfterRedirects);
+                    (<any>window).ga('send', 'pageview');
+                  }
+                });
               }
 
   ngOnInit() {
