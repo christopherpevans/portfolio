@@ -10,6 +10,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 import { GtagModule } from 'angular-gtag';
 import { FirestoreSettingsToken} from '@angular/fire/firestore';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -32,6 +33,9 @@ import { AuthModule } from './auth/auth.module';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { AddToCartComponent } from './shared/add-to-cart.component';
 import { DialogOverviewExampleDialogComponent } from './admin/manage-products/manage-products.component';
+import { FeaturesComponent } from './features/features.component';
+import { FeatureService } from './features/feature.service';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 
@@ -51,7 +55,9 @@ import { DialogOverviewExampleDialogComponent } from './admin/manage-products/ma
     WebDesignComponent,
     ProfileComponent,
     PageNotFoundComponent,
-    DialogOverviewExampleDialogComponent
+    DialogOverviewExampleDialogComponent,
+    FeaturesComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
@@ -61,6 +67,7 @@ import { DialogOverviewExampleDialogComponent } from './admin/manage-products/ma
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    FlexLayoutModule,
     AdminModule,
     AuthModule,
     AngularFireModule.initializeApp(environment.firebase),
@@ -73,6 +80,7 @@ import { DialogOverviewExampleDialogComponent } from './admin/manage-products/ma
     AddToCartComponent,
     DialogOverviewExampleDialogComponent],
   providers: [DataService,
+              FeatureService,
               AngularFirestore, { provide: FirestoreSettingsToken, useValue: {} }],
   bootstrap: [AppComponent]
 })
