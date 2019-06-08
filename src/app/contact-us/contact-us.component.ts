@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { emailValidator } from '../theme/utils/app-validators';
+import { Contact } from '../models/contact';
+import { ContactService } from '../services/contact.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -8,25 +10,32 @@ import { emailValidator } from '../theme/utils/app-validators';
   styleUrls: ['./contact-us.component.scss']
 })
 export class ContactUsComponent implements OnInit {
-  public lat = 29.7604;
-  public lng = -95.3698;
+  public lat = 29.8297;
+  public lng = -95.6668;
   public zoom = 12;
   public contactForm: FormGroup;
 
-  constructor(public formBuilder: FormBuilder) { }
+  model = new Contact('', '', '', '');
+  contact: any[] = [];
+
+  constructor(public formBuilder: FormBuilder,
+              private contactService: ContactService) { }
 
   ngOnInit() {
     this.contactForm = this.formBuilder.group({
       name: ['', Validators.required],
       email: ['', Validators.compose([Validators.required, emailValidator])],
       phone: ['', Validators.required],
-      message: ['', Validators.required]
+      description: ['', Validators.required]
     });
   }
 
-  public onContactFormSubmit(values: Object): void {
+  public onContactFormSubmit(values): void {
     if (this.contactForm.valid) {
-      console.log(values);
+      this.contactService.addContact(values)
+    .subscribe(contact => this.contact.push(this.model));
+    // form.reset();
+      // console.log(values);
     }
   }
 
