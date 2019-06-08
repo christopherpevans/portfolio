@@ -11,6 +11,7 @@ import { environment } from '../environments/environment';
 import { GtagModule } from 'angular-gtag';
 import { FirestoreSettingsToken} from '@angular/fire/firestore';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -70,6 +71,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     FlexLayoutModule,
     AdminModule,
     AuthModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyA-3erIrrfY9jYK8NuHWCB5AZu1huUyMyk'
+    }),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,

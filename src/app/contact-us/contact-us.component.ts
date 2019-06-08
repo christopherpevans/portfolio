@@ -8,8 +8,8 @@ import { emailValidator } from '../theme/utils/app-validators';
   styleUrls: ['./contact-us.component.scss']
 })
 export class ContactUsComponent implements OnInit {
-  public lat = 40.678178;
-  public lng = -73.944158;
+  public lat = 29.7604;
+  public lng = -95.3698;
   public zoom = 12;
   public contactForm: FormGroup;
 
