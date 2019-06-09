@@ -34,7 +34,7 @@
                       </mat-form-field>
                   </div>
                   <div class="w-100 py-4 text-center">
-                      <button mat-raised-button color="accent" type="submit" class="send">
+                      <button [disabled]="!contactForm.valid" mat-raised-button color="accent" type="submit" class="send">
                           <mat-icon class="mr-2">send</mat-icon>Send</button>
                   </div>
               </form>
