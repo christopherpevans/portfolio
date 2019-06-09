@@ -23,7 +23,6 @@ export class ContactService {
 
   // ADD CONTACT
   addContact(model: Contact): Observable<Contact> {
-
     return this.http.post<Contact>(this.contactUrl, model, this.httpOptions);
   }
 }
