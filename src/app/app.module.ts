@@ -39,6 +39,11 @@ import { FeaturesComponent } from './features/features.component';
 import { FeatureService } from './features/feature.service';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { OurWorksComponent } from './our-works/our-works.component';
+import { OurServicesComponent } from './our-services/our-services.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { PricingComponent } from './pricing/pricing.component';
+import { MonthlyComponent } from './monthly/monthly.component';
+import { YearlyComponent } from './yearly/yearly.component';
 
 
 
@@ -61,7 +66,12 @@ import { OurWorksComponent } from './our-works/our-works.component';
     DialogOverviewExampleDialogComponent,
     FeaturesComponent,
     ContactUsComponent,
-    OurWorksComponent
+    OurWorksComponent,
+    OurServicesComponent,
+    TestimonialsComponent,
+    PricingComponent,
+    MonthlyComponent,
+    YearlyComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +86,7 @@ import { OurWorksComponent } from './our-works/our-works.component';
     AuthModule,
     NguCarouselModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyA-3erIrrfY9jYK8NuHWCB5AZu1huUyMyk'
+      apiKey: environment.key
     }),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
