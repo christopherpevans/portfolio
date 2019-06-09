@@ -13,7 +13,7 @@ import { FirestoreSettingsToken} from '@angular/fire/firestore';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AgmCoreModule } from '@agm/core';
 import { NguCarouselModule } from '@ngu/carousel';
-
+import { config } from '../config';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MaterialModule } from './shared/material.module';
@@ -86,7 +86,7 @@ import { YearlyComponent } from './yearly/yearly.component';
     AuthModule,
     NguCarouselModule,
     AgmCoreModule.forRoot({
-      apiKey: environment.key
+      apiKey: config.key
     }),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,

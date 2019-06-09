@@ -1,11 +1,19 @@
-<div id="pricing" class="mt-2 pt-3">
-  <div fxLayout="column" fxLayoutAlign="center center" class="title-section p-2 mb-2">
-      <h1>Plans and Pricing</h1>
-      <p class="secondary-text-color">Choose the plan that's best for your business.</p>
+<div fxLayout="row wrap" fxLayoutAlign="center center">
+  <div *ngFor="let item of items" fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" class="p-2">
+      <mat-card class="pricing-card text-center p-0">
+          <h2 class="pricing-title my-3">{{item.name}}</h2>
+          <div class="bg-accent pricing-header p-3" fxLayout="column" fxLayoutAlign="center center">
+              <!-- <h1>$ {{item.price}}<small> /mo</small></h1> -->
+              <h1>{{item.price | currency}}</h1>
+              <p class="desc mb-2">{{item.desc}}</p>
+          </div>
+          <div class="secondary-text-color p-3">
+              <p class="py-2">{{item.count}} Items</p>
+              <p class="py-2">{{item.storage}} Storage</p>
+              <p class="py-2" [class.del]="!item.support">24/7 Support</p>
+              <p class="py-2" [class.del]="!item.ssl">SSL Certificate</p>
+              <!-- <button mat-raised-button color="primary" class="mt-3">Buy now</button> -->
+          </div>
+      </mat-card>
   </div>
-  <mat-tab-group class="pricing-tabs">
-      <mat-tab label="MONTHLY"><app-monthly></app-monthly></mat-tab>
-      <!-- <mat-tab label="PRICES"><app-monthly></app-monthly></mat-tab> -->
-      <mat-tab label="YEARLY"><app-yearly></app-yearly></mat-tab>
-  </mat-tab-group>
 </div>

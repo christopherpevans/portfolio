@@ -19,7 +19,7 @@
   <ngu-carousel #testimonialsCarousel [inputs]="testimonialsCarouselConfig" [dataSource]="testimonials">
       <ngu-tile *nguCarouselDef="let testimonial; let j = index">
           <mat-card class="testimonial-item">
-              <img [src]="testimonial.image" alt="image" class="mat-elevation-z2">
+              <img style="width: 100px; height: 100px" [src]="testimonial.image" alt="image" class="mat-elevation-z2">
               <p class="text secondary-text-color my-3">"{{testimonial.text}}"</p>
               <h4 class="secondary-text-color"> - {{testimonial.author}}, {{testimonial.company}}</h4>
           </mat-card>
