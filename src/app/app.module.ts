@@ -86,7 +86,7 @@ import { YearlyComponent } from './yearly/yearly.component';
     AuthModule,
     NguCarouselModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyA-3erIrrfY9jYK8NuHWCB5AZu1huUyMyk'
+      apiKey: environment.key
     }),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
