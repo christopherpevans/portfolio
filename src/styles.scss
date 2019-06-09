@@ -15,3 +15,18 @@
 
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+.pricing-header {
+  background: #ff4081;
+  color: white;
+}
+
+
+.pricing-card {
+  border-top: 4px solid #ff4081;
+}
+
+.pricing-title {
+  text-transform: uppercase;
+}

@@ -1,0 +1,18 @@
+.testimonial-item {
+  text-align: center;
+  border-top: 4px solid #ff4081;
+}
+
+img {
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+}

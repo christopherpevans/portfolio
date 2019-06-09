@@ -34,7 +34,7 @@ export class ContactUsComponent implements OnInit {
     if (this.contactForm.valid) {
       this.contactService.addContact(values)
     .subscribe(contact => this.contact.push(this.model));
-    // form.reset();
+    this.contactForm.reset();
       // console.log(values);
     }
   }
