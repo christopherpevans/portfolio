@@ -9,6 +9,9 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 import { GtagModule } from 'angular-gtag';
+import { FirestoreSettingsToken} from '@angular/fire/firestore';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -31,6 +34,9 @@ import { AuthModule } from './auth/auth.module';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { AddToCartComponent } from './shared/add-to-cart.component';
 import { DialogOverviewExampleDialogComponent } from './admin/manage-products/manage-products.component';
+import { FeaturesComponent } from './features/features.component';
+import { FeatureService } from './features/feature.service';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 
@@ -50,7 +56,9 @@ import { DialogOverviewExampleDialogComponent } from './admin/manage-products/ma
     WebDesignComponent,
     ProfileComponent,
     PageNotFoundComponent,
-    DialogOverviewExampleDialogComponent
+    DialogOverviewExampleDialogComponent,
+    FeaturesComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
@@ -60,19 +68,24 @@ import { DialogOverviewExampleDialogComponent } from './admin/manage-products/ma
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    FlexLayoutModule,
     AdminModule,
     AuthModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyA-3erIrrfY9jYK8NuHWCB5AZu1huUyMyk'
+    }),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    GtagModule.forRoot({ trackingId: 'UA-132076132-1', trackPageviews: true })
+    GtagModule.forRoot({ trackingId: 'UA-138997951-1', trackPageviews: true })
   ],
   entryComponents: [
     FormSubmissionComponent,
     AddToCartComponent,
     DialogOverviewExampleDialogComponent],
   providers: [DataService,
-              AngularFirestore],
+              FeatureService,
+              AngularFirestore, { provide: FirestoreSettingsToken, useValue: {} }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -17,7 +17,7 @@ const routes: Routes = [
 
   { path: '', component: HomeComponent},
   { path: 'portfolio', component: PortfolioComponent },
-  // { path: 'contact', component: ContactComponent },
+  { path: 'contact', component: ContactComponent },
   { path: 'customer', component: CustomerComponent, canActivate: [AuthGuard] },
   { path: 'ux', component: UxComponent },
   { path: 'cart', component: ShoppingCartComponent , canActivate: [AuthGuard] },
