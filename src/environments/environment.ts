@@ -11,9 +11,7 @@ export const environment = {
     projectId: 'new-portfolio-77ee0',
     storageBucket: 'new-portfolio-77ee0.appspot.com',
     messagingSenderId: '328132836551'
-  },
-
-  key: 'AIzaSyA-3erIrrfY9jYK8NuHWCB5AZu1huUyMyk'
+  }
 };
 
 /*
