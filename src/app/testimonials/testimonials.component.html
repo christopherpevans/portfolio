@@ -8,11 +8,11 @@
           <ngu-carousel [inputs]="clientsCarouselConfig" [dataSource]="clients">
               <ngu-tile *nguCarouselDef="let client; let j = index">
                   <div class="client-item">
-                      <img [src]="client" alt="image">
+                      <img style="width: 100px; height: 100px" [src]="client" alt="image">
                   </div>
               </ngu-tile>
-              <button mat-mini-fab NguCarouselPrev class="arrow-btn prev"><mat-icon>keyboard_arrow_left</mat-icon></button>
-              <button mat-mini-fab NguCarouselNext class="arrow-btn next"><mat-icon>keyboard_arrow_right</mat-icon></button>
+              <!-- <button mat-mini-fab NguCarouselPrev class="arrow-btn prev"><mat-icon>keyboard_arrow_left</mat-icon></button>
+              <button mat-mini-fab NguCarouselNext class="arrow-btn next"><mat-icon>keyboard_arrow_right</mat-icon></button> -->
           </ngu-carousel>
       </mat-card>
   </div>
