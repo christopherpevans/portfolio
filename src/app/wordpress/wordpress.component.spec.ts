@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MonthlyComponent } from './monthly.component';
+import { WordpressComponent } from './wordpress.component';
 
-describe('MonthlyComponent', () => {
-  let component: MonthlyComponent;
-  let fixture: ComponentFixture<MonthlyComponent>;
+describe('WordpressComponent', () => {
+  let component: WordpressComponent;
+  let fixture: ComponentFixture<WordpressComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MonthlyComponent ]
+      declarations: [ WordpressComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MonthlyComponent);
+    fixture = TestBed.createComponent(WordpressComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { YearlyComponent } from './yearly.component';
+import { WixComponent } from './wix.component';
 
-describe('YearlyComponent', () => {
-  let component: YearlyComponent;
-  let fixture: ComponentFixture<YearlyComponent>;
+describe('WixComponent', () => {
+  let component: WixComponent;
+  let fixture: ComponentFixture<WixComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ YearlyComponent ]
+      declarations: [ WixComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(YearlyComponent);
+    fixture = TestBed.createComponent(WixComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

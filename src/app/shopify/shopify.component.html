@@ -3,11 +3,11 @@
       <mat-card class="pricing-card text-center p-0">
           <h2 class="pricing-title my-3">{{item.name}}</h2>
           <div class="bg-accent pricing-header p-3" fxLayout="column" fxLayoutAlign="center center">
-              <h1>$ {{item.price}}<small> /yr</small></h1>
+              <h1>{{item.price | currency}}</h1>
               <p class="desc mb-2">{{item.desc}}</p>
           </div>
           <div class="secondary-text-color p-3">
-              <p class="py-2">{{item.count}} Items</p>
+              <p class="py-2">{{item.cards}}</p>
               <p class="py-2">{{item.storage}} Storage</p>
               <p class="py-2" [class.del]="!item.support">24/7 Support</p>
               <p class="py-2" [class.del]="!item.ssl">SSL Certificate</p>
