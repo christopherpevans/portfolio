@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MonthlyComponent } from './monthly.component';
+import { CustomSiteComponent } from './custom-site.component';
 
-describe('MonthlyComponent', () => {
-  let component: MonthlyComponent;
-  let fixture: ComponentFixture<MonthlyComponent>;
+describe('CustomSiteComponent', () => {
+  let component: CustomSiteComponent;
+  let fixture: ComponentFixture<CustomSiteComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MonthlyComponent ]
+      declarations: [ CustomSiteComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MonthlyComponent);
+    fixture = TestBed.createComponent(CustomSiteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

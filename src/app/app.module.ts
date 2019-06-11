@@ -42,8 +42,10 @@ import { OurWorksComponent } from './our-works/our-works.component';
 import { OurServicesComponent } from './our-services/our-services.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { PricingComponent } from './pricing/pricing.component';
-import { MonthlyComponent } from './monthly/monthly.component';
-import { YearlyComponent } from './yearly/yearly.component';
+import { WordpressComponent } from './wordpress/wordpress.component';
+import { ShopifyComponent } from './shopify/shopify.component';
+import { WixComponent } from './wix/wix.component';
+import { CustomSiteComponent } from './custom-site/custom-site.component';
 
 
 
@@ -70,8 +72,10 @@ import { YearlyComponent } from './yearly/yearly.component';
     OurServicesComponent,
     TestimonialsComponent,
     PricingComponent,
-    MonthlyComponent,
-    YearlyComponent
+    WordpressComponent,
+    ShopifyComponent,
+    WixComponent,
+    CustomSiteComponent
   ],
   imports: [
     BrowserModule,
