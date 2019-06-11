@@ -7,7 +7,7 @@
       <div fxFlex="100" fxFlex.gt-xs="50" class="p-2">
           <mat-card class="contact-form p-4">
               <h1 class="secondary-text-color title">Send us an email</h1>
-              <form [formGroup]="contactForm" (ngSubmit)="onContactFormSubmit(contactForm.value)" fxLayout="row wrap">
+              <form [formGroup]="contactForm" #formDirective="ngForm" (ngSubmit)="onContactFormSubmit(contactForm.value, formDirective)" fxLayout="row wrap">
                   <div fxFlex="100" class="mt-2">
                       <mat-form-field class="w-100">
                           <input matInput placeholder="Name" formControlName="name" required>

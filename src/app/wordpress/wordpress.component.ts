@@ -1,44 +1,45 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-yearly',
-  templateUrl: './yearly.component.html',
-  styleUrls: ['./yearly.component.scss']
+  selector: 'app-wordpress',
+  templateUrl: './wordpress.component.html',
+  styleUrls: ['./wordpress.component.scss']
 })
-export class YearlyComponent implements OnInit {
+export class WordpressComponent implements OnInit {
+
   public items = [
     {
-      name: 'starter',
-      price: 59,
+      name: 'landing page',
+      price: 400,
       desc: 'Simplest package to get you started',
-      count: '100',
+      cards: '100 business cards',
       storage: '50 GB',
       support: false,
       ssl: false
     },
     {
-      name: 'premium',
-      price: 179,
+      name: 'blog',
+      price: 800,
       desc: 'The most popular package we offer',
-      count: '2000',
+      cards: '200 business cards',
       storage: '500 Gb',
       support: false,
       ssl: false
     },
     {
-      name: 'business',
-      price: 599,
+      name: 'ecommerce',
+      price: 2000,
       desc: 'The perfect package for your small business',
-      count: 'Unlimited',
+      cards: '500 business cards',
       storage: '1 TB',
       support: true,
       ssl: false
     },
     {
       name: 'enterprise',
-      price: 1799,
+      price: 3000,
       desc: 'Our most advanced & complete package',
-      count: 'Unlimited',
+      cards: '1000 business cards',
       storage: 'Unlimited',
       support: true,
       ssl: true
