@@ -45,6 +45,7 @@ import { PricingComponent } from './pricing/pricing.component';
 import { WordpressComponent } from './wordpress/wordpress.component';
 import { ShopifyComponent } from './shopify/shopify.component';
 import { WixComponent } from './wix/wix.component';
+import { CustomSiteComponent } from './custom-site/custom-site.component';
 
 
 
@@ -73,7 +74,8 @@ import { WixComponent } from './wix/wix.component';
     PricingComponent,
     WordpressComponent,
     ShopifyComponent,
-    WixComponent
+    WixComponent,
+    CustomSiteComponent
   ],
   imports: [
     BrowserModule,
