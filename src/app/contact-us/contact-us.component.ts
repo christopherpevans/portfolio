@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormGroupDirective } from '@angular/forms';
 import { emailValidator } from '../theme/utils/app-validators';
 import { Contact } from '../models/contact';
 import { ContactService } from '../services/contact.service';
+import { MatSnackBar } from '@angular/material';
+import { Router } from '@angular/router';
+import { FormSubmissionComponent } from '../shared/form-submission.component';
 
 @Component({
   selector: 'app-contact-us',
@@ -19,7 +22,9 @@ export class ContactUsComponent implements OnInit {
   contact: any[] = [];
 
   constructor(public formBuilder: FormBuilder,
-              private contactService: ContactService) { }
+              private contactService: ContactService,
+              public snackBar: MatSnackBar,
+              private router: Router) { }
 
   ngOnInit() {
     this.contactForm = this.formBuilder.group({
@@ -30,12 +35,18 @@ export class ContactUsComponent implements OnInit {
     });
   }
 
-  public onContactFormSubmit(values): void {
+  public onContactFormSubmit(values, formDirective: FormGroupDirective) {
     if (this.contactForm.valid) {
       this.contactService.addContact(values)
-    .subscribe(contact => this.contact.push(this.model));
-    this.contactForm.reset();
-      // console.log(values);
+      .subscribe(contact => this.contact.push(this.model));
+      formDirective.resetForm();
+      this.contactForm.reset();
+
+    this.snackBar.openFromComponent(FormSubmissionComponent, {
+      duration: 3000,
+      verticalPosition: 'top'
+    });
+
     }
   }
 
