@@ -9,20 +9,20 @@ export class FeatureService {
   getFeatures() {
     return [
       {
-        icon: 'cloud_upload',
-        title: 'Instant Cloud',
+        icon: 'desktop_windows',
+        title: 'Web Design',
         desc:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
       },
       {
-        icon: 'thumb_up',
-        title: 'Better Ideas',
+        icon: 'mobile_screen_share',
+        title: 'Mobile Design',
         desc:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
       },
       {
         icon: 'trending_up',
-        title: 'Performace',
+        title: 'Performance',
         desc:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
       },

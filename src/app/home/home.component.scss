@@ -4,12 +4,6 @@
   margin-bottom: 0;
   background-color: #fff;
 }
-@media (min-width: 768px) {
-  .jumbotron {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
-}
 
 .jumbotron p:last-child {
   margin-bottom: 0;
@@ -153,5 +147,16 @@ footer p {
 @media screen and (max-width: 599px) {
   .pricing-tabs.mat-tab-group .mat-tab-header{
       width: 210px;
+  }
+
+  .header1 {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 }
