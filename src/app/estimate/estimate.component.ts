@@ -7,11 +7,11 @@ import { FormSubmissionComponent } from '../shared/form-submission.component';
 import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  selector: 'app-estimate',
+  templateUrl: './estimate.component.html',
+  styleUrls: ['./estimate.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class EstimateComponent implements OnInit {
 
   // tslint:disable-next-line:max-line-length
   types = ['Website Design', 'Social Media Ads', 'Print Design', 'Logo Design', 'Design Only (flyers, business cards, post cards, etc)', 'Printing', 'Package Deal (Multiple Services)'];

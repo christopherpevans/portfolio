@@ -17,7 +17,7 @@ import { config } from '../config';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MaterialModule } from './shared/material.module';
-import { ContactComponent } from './contact/contact.component';
+import { EstimateComponent } from './estimate/estimate.component';
 import { CustomerComponent } from './customer/customer.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
@@ -54,7 +54,7 @@ import { CustomSiteComponent } from './custom-site/custom-site.component';
     AppComponent,
     AddToCartComponent,
     NavBarComponent,
-    ContactComponent,
+    EstimateComponent,
     FormSubmissionComponent,
     CustomerComponent,
     FooterComponent,

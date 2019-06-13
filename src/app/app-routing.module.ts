@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
+import { EstimateComponent } from './estimate/estimate.component';
 import { CustomerComponent } from './customer/customer.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { UxComponent } from './ux/ux.component';
@@ -17,7 +17,7 @@ const routes: Routes = [
 
   { path: '', component: HomeComponent},
   { path: 'portfolio', component: PortfolioComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'estimate', component: EstimateComponent },
   { path: 'customer', component: CustomerComponent, canActivate: [AuthGuard] },
   { path: 'ux', component: UxComponent },
   { path: 'cart', component: ShoppingCartComponent , canActivate: [AuthGuard] },
