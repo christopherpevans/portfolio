@@ -1,9 +1,9 @@
 <div class="container">
-  <h1>Contact Us</h1>
+  <h3 style="margin-top: 15px;">Free Estimate</h3>
   <!-- <p>Please let us know about what service you are looking for so we can serve you. The more information, the better. Thank you.</p> -->
 <mat-card class="card">
 
-  <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+  <form #estimateForm="ngForm" (ngSubmit)="onSubmit(estimateForm)">
     <div class="example-container">
       <mat-form-field hintLabel="Min 3 characters">
         <input type="text" matInput #input minlength="3" placeholder="Name" required [(ngModel)]="model.name" name="name">
@@ -44,7 +44,7 @@
         <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
       </mat-form-field>
     </div>
-    <button mat-raised-button color="primary" [disabled]="!contactForm.form.valid">Submit</button>
+    <button mat-raised-button color="primary" [disabled]="!estimateForm.form.valid">Submit</button>
   </form>
 
 <!-- TODO: remove this: {{diagnostic}}

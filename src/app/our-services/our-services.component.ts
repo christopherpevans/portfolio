@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { NguCarouselConfig } from '@ngu/carousel';
 import { ProjectService } from '../services/project.service';
 
 @Component({
   selector: 'app-our-services',
   templateUrl: './our-services.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./our-services.component.scss']
 })
 export class OurServicesComponent implements OnInit {
