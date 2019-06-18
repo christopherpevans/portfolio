@@ -5,7 +5,8 @@
   </div>
   <ngu-carousel #myCarousel [inputs]="worksCarouselConfig" [dataSource]="works">
       <ngu-tile *nguCarouselDef="let work; let j = index">
-         <mat-card>
+        <div class="container">
+         <mat-card class="card">
               <img mat-card-image [src]="work.src" alt="image">
               <mat-card-content>
                   <h3>{{work.name}}</h3>
@@ -17,6 +18,7 @@
                   <button mat-icon-button><mat-icon>share</mat-icon></button>
               </mat-card-actions>
           </mat-card>
+        </div>
       </ngu-tile>
       <!-- <button mat-mini-fab NguCarouselPrev class="arrow-btn prev"><mat-icon>keyboard_arrow_left</mat-icon></button>
       <button mat-mini-fab NguCarouselNext class="arrow-btn next"><mat-icon>keyboard_arrow_right</mat-icon></button> -->

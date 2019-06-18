@@ -8,7 +8,8 @@
           <div fxLayout="row wrap" fxLayoutAlign="center center">
               <div *ngFor="let feature of features" fxFlex="100" fxFlex.gt-md="25" fxFlex.md="33.3" fxFlex.sm="50" class="p-2">
                   <mat-card fxLayout="column" fxLayoutAlign="center center" class="w-100">
-                      <mat-icon class="mat-icon-xlg accent-color">{{feature.icon}}</mat-icon>
+                      <i class="{{feature.icon}}"></i>
+                      <!-- <mat-icon class="mat-icon-xlg accent-color">{{feature.icon}}</mat-icon> -->
                       <h2 class="block-title my-3">{{feature.title}}</h2>
                       <p class="text-center secondary-text-color">
                           {{feature.desc}}

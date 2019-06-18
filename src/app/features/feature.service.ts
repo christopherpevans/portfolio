@@ -9,53 +9,53 @@ export class FeatureService {
   getFeatures() {
     return [
       {
-        icon: 'desktop_windows',
-        title: 'Web Design',
+        icon: 'fas fa-desktop fa-3x',
+        title: 'Desktop App',
+        desc:
+          'Our websites feature a powerful, clean, and an easy-to-use interface'
+      },
+      {
+        icon: 'fas fa-mobile-alt fa-3x',
+        title: 'Mobile App',
+        desc:
+          'We have the right combination of team members to take your next big mobile venture to success'
+      },
+      {
+        icon: 'fas fa-pencil-ruler fa-3x',
+        title: 'UX Design',
         desc:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
       },
       {
-        icon: 'mobile_screen_share',
-        title: 'Mobile Design',
+        icon: 'fas fa-pen-nib fa-3x',
+        title: 'Logo Design',
+        desc:
+          'Your logo is the best first impression… so make it powerful.'
+      },
+      {
+        icon: 'fab fa-google fa-3x',
+        title: 'Google Services',
         desc:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
       },
       {
-        icon: 'trending_up',
-        title: 'Performance',
+        icon: 'fab fa-instagram fa-3x',
+        title: 'Social Media Banner',
         desc:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
-      },
-      {
-        icon: 'access_time',
-        title: 'Time Tracker',
-        desc:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
-      },
-      {
-        icon: 'desktop_windows',
-        title: 'Desktop app',
-        desc:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
-      },
-      {
-        icon: 'card_giftcard',
-        title: 'Gift Voucher',
-        desc:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
-      },
-      {
-        icon: 'report',
-        title: 'Weekly Reports',
-        desc:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
-      },
-      {
-        icon: 'add_shopping_cart',
-        title: 'E-commerce',
-        desc:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
+          'Take your social media ads to the next level with custom graphics.'
       }
+      // {
+      //   icon: 'report',
+      //   title: 'Weekly Reports',
+      //   desc:
+      //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
+      // },
+      // {
+      //   icon: 'add_shopping_cart',
+      //   title: 'E-commerce',
+      //   desc:
+      //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
+      // }
     ];
   }
 }

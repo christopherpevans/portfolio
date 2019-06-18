@@ -14,7 +14,7 @@ import { NgForm } from '@angular/forms';
 export class EstimateComponent implements OnInit {
 
   // tslint:disable-next-line:max-line-length
-  types = ['Website Design', 'Social Media Ads', 'Print Design', 'Logo Design', 'Design Only (flyers, business cards, post cards, etc)', 'Printing', 'Package Deal (Multiple Services)'];
+  types = ['Wordpress Website', 'Wix Website', 'Shopify Website', 'Custom Website', 'Logo Design', 'Package Deal (Multiple Services)', 'Google Services (Adwords, Analytics, Search Console)'];
   budgets = ['$250 or less', '$250 - $500', '$500 - $1000', '$1000 - $1500', '$1500 or more'];
   // model = new Contact('Princeton', 'Princetonevans@yahoo.com', 'Big Blog', '2018-11-09T06:00:00.000Z', 8322353613, 'Logo');
   model = new Contact('', '', '', '', null, '', '');
