@@ -40,7 +40,7 @@ export class FeatureService {
       },
       {
         icon: 'fab fa-instagram fa-3x',
-        title: 'Social Media Banner',
+        title: 'Social Media Post',
         desc:
           'Take your social media ads to the next level with custom graphics.'
       }
