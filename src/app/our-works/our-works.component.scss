@@ -10,6 +10,15 @@ h3 {
   text-align: center
 }
 
+a {
+  color: white;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 1000px) {
   img {
     height: 250px;

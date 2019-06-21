@@ -13,36 +13,41 @@ export class ProjectService {
         desc:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.',
         src:
-          '../../assets/img/hnp1.jpg'
+          '../../assets/img/hnp1.jpg',
+        link: 'https://www.hairnparis.com'
       },
       {
         name: 'Brooklyn Banking',
         desc:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.',
         src:
-          '../../assets/img/Group_1.jpg'
+          '../../assets/img/Group_1.jpg',
+        link: 'https://www.envizn.io/ux'
       },
       {
         name: 'Legacy Looks',
         desc:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.',
         src:
-          '../../assets/img/rsz_legacy7.jpg'
+          '../../assets/img/rsz_legacy7.jpg',
+        link: 'https://www.legacylooks.com'
       },
       {
         name: 'Bantr App',
         desc:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.',
         src:
-          '../../assets/img/pjimage.jpg'
-      }
-      // {
-      //   name: 'Project 5',
-      //   desc:
-      //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.',
-      //   src:
-      //     'https://images.unsplash.com/photo-1422480041422-130238c67fe2?w=650'
-      // },
+          '../../assets/img/pjimage.jpg',
+        link: 'https://www.envizn.io/ux'
+      },
+      {
+        name: 'UX Portfolio',
+        desc:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.',
+        src:
+          '../../assets/img/uxbyparis.png',
+        link: 'https://www.uxbyparis.com'
+      },
       // {
       //   name: 'Project 6',
       //   desc:
