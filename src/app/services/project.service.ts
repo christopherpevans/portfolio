@@ -11,7 +11,8 @@ export class ProjectService {
       {
         name: 'Hair-N-Paris',
         desc:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.',
+          // tslint:disable-next-line:max-line-length
+          'Complete Shopify eCommerce store with the implementation of products. Setup of store payment processing through Stripe and PayPal. Installed Fraud app to protect the client from at-risk orders.',
         src:
           '../../assets/img/hnp1.jpg',
         link: 'https://www.hairnparis.com'
@@ -19,7 +20,8 @@ export class ProjectService {
       {
         name: 'Brooklyn Banking',
         desc:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.',
+          // tslint:disable-next-line:max-line-length
+          'Internet Banking application that has various levels of interactions between the bank and its customers to provides the customers with the necessary banking interfaces at the customer\'s fingertips.',
         src:
           '../../assets/img/Group_1.jpg',
         link: 'https://www.envizn.io/ux'
@@ -120,33 +122,33 @@ export class ProjectService {
       {
         text:
           // tslint:disable-next-line:max-line-length
-          'Phasellus sed metus leo. Donec laoreet, lacus ut suscipit convallis, erat enim eleifend nulla, at sagittis enim urna et lacus. Etiam orci lacus, volutpat at egestas sit amet, vestibulum sit amet eros.',
-        author: 'Mr. Adam Sandler',
+          'I hired Envizn to create a demo mobile banking app for my company and I was blown away by the quality of work, the professionalism, and the speed of project delivery. ',
+        author: 'Nick',
         company: 'General Electric',
         image: 'assets/img/profile/adam.jpg'
       },
       {
         text:
           // tslint:disable-next-line:max-line-length
-          'Phasellus sed metus leo. Donec laoreet, lacus ut suscipit convallis, erat enim eleifend nulla, at sagittis enim urna et lacus. Etiam orci lacus, volutpat at egestas sit amet, vestibulum sit amet eros.',
-        author: 'Mrs. Ashley Ahlberg',
+          'Amazing work Envizn! I absolutely love my Wix website. I will be returning to have you guys create and design content for my social media accounts. I could not have asked for better.',
+        author: 'Hidi',
         company: 'Dell EMC',
         image: 'assets/img/profile/ashley.jpg'
       },
       {
         text:
           // tslint:disable-next-line:max-line-length
-          'Phasellus sed metus leo. Donec laoreet, lacus ut suscipit convallis, erat enim eleifend nulla, at sagittis enim urna et lacus. Etiam orci lacus, volutpat at egestas sit amet, vestibulum sit amet eros.',
-        author: 'Mr. Bruno Vespa',
+          'Envizn has the best customer service I’ve ever experienced. There is always a positive interaction when speaking to members of their team. I can\'t help but smile when I contact them because they truly make me feel like family. The employees are super friendly, and you immediately form a connection with them.',
+        author: 'Vernon',
         company: 'Southwest Airlines',
         image: 'assets/img/profile/bruno.jpg'
       },
       {
         text:
           // tslint:disable-next-line:max-line-length
-          'Phasellus sed metus leo. Donec laoreet, lacus ut suscipit convallis, erat enim eleifend nulla, at sagittis enim urna et lacus. Etiam orci lacus, volutpat at egestas sit amet, vestibulum sit amet eros.',
-        author: 'Mrs. Julia Aniston',
-        company: 'Apple Co',
+          'Contacting Envizn to setup my Shopify store was the best choice I ever made. Envizn created my logo, setup my products, as well as created amazing content to help with SEO for my site. I love this company.',
+        author: 'Julia',
+        company: 'RX2 Solutions',
         image: 'assets/img/profile/julia.jpg'
       }
     ];

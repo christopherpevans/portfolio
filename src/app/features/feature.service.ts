@@ -12,37 +12,40 @@ export class FeatureService {
         icon: 'fas fa-desktop fa-3x',
         title: 'Desktop App',
         desc:
-          'Our websites feature a powerful, clean, and an easy-to-use interface'
+          // tslint:disable-next-line:max-line-length
+          'Complete E-commerce Shopify, Wix, or WordPress store / website. Envizn will also build a custom responsive website using HTML, CSS, Bootstrap, and JavaScript.'
       },
       {
         icon: 'fas fa-mobile-alt fa-3x',
         title: 'Mobile App',
         desc:
-          'We have the right combination of team members to take your next big mobile venture to success'
+          // tslint:disable-next-line:max-line-length
+          'Get optimum performance on any device by allowing Envizn’s certified professionals to build an eye-popping mobile application, with fast and convenient delivery.'
       },
       {
         icon: 'fas fa-pencil-ruler fa-3x',
         title: 'UX Design',
         desc:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
+          'We will design stunning wireframes and prototypes for websites and any mobile applications that will enhance the early concept of your company product.'
       },
       {
         icon: 'fas fa-pen-nib fa-3x',
         title: 'Logo Design',
         desc:
-          'Your logo is the best first impression… so make it powerful.'
+          'Get a unique designed logo created by professional designers that will make a statement for your brand.'
       },
       {
         icon: 'fab fa-google fa-3x',
         title: 'Google Services',
         desc:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
+          // tslint:disable-next-line:max-line-length
+          'Take the stress and hassle out of setting up and linking your Google accounts. We will set up your AdWords, Analytics, and Remarketing accounts.'
       },
       {
         icon: 'fab fa-instagram fa-3x',
         title: 'Social Media Post',
         desc:
-          'Take your social media ads to the next level with custom graphics.'
+          'We will create an engaging post for any social media platform that will have your followers interacting and sharing.'
       }
       // {
       //   icon: 'report',
