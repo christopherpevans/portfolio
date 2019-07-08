@@ -1,5 +1,6 @@
 .container {
   display: flex;
+  align-items: stretch;
 }
 
 img {
@@ -17,6 +18,10 @@ a {
 
 button {
   cursor: pointer;
+}
+
+p {
+  height: 100px;
 }
 
 @media only screen and (max-width: 1000px) {

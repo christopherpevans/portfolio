@@ -29,7 +29,8 @@ export class ProjectService {
       {
         name: 'Legacy Looks',
         desc:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.',
+          // tslint:disable-next-line:max-line-length
+          'Complete Shopify eCommerce store with the implementation of products. Setup of store payment processing through Stripe and PayPal. Installed Fraud app to protect the client from at-risk orders.',
         src:
           '../../assets/img/rsz_legacy7.jpg',
         link: 'https://www.legacylooks.com'
@@ -37,7 +38,7 @@ export class ProjectService {
       {
         name: 'Bantr App',
         desc:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.',
+          'High-fidelity prototype messaging app built with Sketch and Adobe XD.',
         src:
           '../../assets/img/pjimage.jpg',
         link: 'https://www.envizn.io/ux'
@@ -45,7 +46,8 @@ export class ProjectService {
       {
         name: 'UX Portfolio',
         desc:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.',
+          // tslint:disable-next-line:max-line-length
+          'This project is a portfolio for a UX Designer using HTML, CSS and BootStrap. This project also included domain registration and hosting.',
         src:
           '../../assets/img/uxbyparis.png',
         link: 'https://www.uxbyparis.com'
