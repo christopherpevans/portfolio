@@ -28,7 +28,7 @@ export class ShopifyComponent implements OnInit {
     {
       name: 'business',
       price: 1250,
-      desc: 'The perfect package for your small business',
+      desc: 'Perfect for your small business.',
       cards: 'Unlimited',
       storage: '1 TB',
       support: true,
