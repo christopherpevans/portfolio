@@ -29,7 +29,7 @@ export class CustomSiteComponent implements OnInit {
     {
       name: 'ecommerce',
       price: 8000,
-      desc: 'The perfect package for your small business',
+      desc: 'Perfect for your small business.',
       cards: '500 business cards',
       storage: '1 TB',
       support: true,

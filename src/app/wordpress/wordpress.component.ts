@@ -13,7 +13,7 @@ export class WordpressComponent implements OnInit {
       price: 400,
       desc: 'Simplest package to get you started',
       cards: '100 business cards',
-      storage: '50 GB',
+      pages: '1 page with 5 sections',
       support: false,
       ssl: false
     },
@@ -22,16 +22,16 @@ export class WordpressComponent implements OnInit {
       price: 800,
       desc: 'The most popular package we offer',
       cards: '200 business cards',
-      storage: '500 Gb',
+      pages: '5 pages of content',
       support: false,
       ssl: false
     },
     {
       name: 'ecommerce',
       price: 2000,
-      desc: 'The perfect package for your small business',
+      desc: 'Perfect for your small business.',
       cards: '500 business cards',
-      storage: '1 TB',
+      pages: '20 pages of content',
       support: true,
       ssl: false
     },
@@ -40,7 +40,7 @@ export class WordpressComponent implements OnInit {
       price: 3000,
       desc: 'Our most advanced & complete package',
       cards: '1000 business cards',
-      storage: 'Unlimited',
+      pages: 'Unlimited pages',
       support: true,
       ssl: true
     }
