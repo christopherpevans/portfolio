@@ -14,7 +14,7 @@ export class WordpressComponent implements OnInit {
       desc: 'Simplest package to get you started',
       cards: '100 business cards',
       pages: '1 page with 5 sections',
-      support: false,
+      website: 'Wordpress Website',
       ssl: false
     },
     {
@@ -23,7 +23,7 @@ export class WordpressComponent implements OnInit {
       desc: 'The most popular package we offer',
       cards: '200 business cards',
       pages: '5 pages of content',
-      support: false,
+      website: 'Wordpress Website',
       ssl: false
     },
     {
@@ -32,7 +32,7 @@ export class WordpressComponent implements OnInit {
       desc: 'Perfect for your small business.',
       cards: '500 business cards',
       pages: '20 pages of content',
-      support: true,
+      website: 'Wordpress Website',
       ssl: false
     },
     {
@@ -41,7 +41,7 @@ export class WordpressComponent implements OnInit {
       desc: 'Our most advanced & complete package',
       cards: '1000 business cards',
       pages: 'Unlimited pages',
-      support: true,
+      website: 'Wordpress Website',
       ssl: true
     }
   ];

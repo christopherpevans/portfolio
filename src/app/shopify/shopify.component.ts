@@ -11,36 +11,36 @@ export class ShopifyComponent implements OnInit {
       name: 'starter',
       price: 800,
       desc: 'Simplest package to get you started',
-      cards: '100',
-      storage: '50 GB',
-      support: false,
+      cards: '100 cards',
+      pages: '5 pages',
+      website: 'Shopify Website',
       ssl: false
     },
     {
       name: 'premium',
       price: 1100,
       desc: 'The most popular package we offer',
-      cards: '2000',
-      storage: '500 Gb',
-      support: false,
+      cards: '200 cards',
+      pages: '10 pages',
+      website: 'Shopify Website',
       ssl: false
     },
     {
       name: 'business',
       price: 1250,
       desc: 'Perfect for your small business.',
-      cards: 'Unlimited',
-      storage: '1 TB',
-      support: true,
+      cards: '500 cards',
+      pages: '15 pages',
+      website: 'Shopify Website',
       ssl: false
     },
     {
       name: 'enterprise',
       price: 1500,
       desc: 'Our most advanced & complete package',
-      cards: 'Unlimited',
-      storage: 'Unlimited',
-      support: true,
+      cards: '1000 cards',
+      pages: 'Unlimited',
+      website: 'Shopify Website',
       ssl: true
     }
   ];
