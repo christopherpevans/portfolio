@@ -43,15 +43,16 @@ export class ProjectService {
           '../../assets/img/pjimage.jpg',
         link: 'https://www.envizn.io/ux'
       },
-      {
-        name: 'UX Portfolio',
-        desc:
-          // tslint:disable-next-line:max-line-length
-          'This project is a portfolio for a UX Designer using HTML, CSS and BootStrap. This project also included domain registration and hosting.',
-        src:
-          '../../assets/img/uxbyparis.png',
-        link: 'https://www.uxbyparis.com'
-      },
+      // {
+      //   name: 'UX Portfolio',
+      //   desc:
+      //     // tslint:disable-next-line:max-line-length
+      // tslint:disable-next-line:max-line-length
+      //     'This project is a portfolio for a UX Designer using HTML, CSS and BootStrap. This project also included domain registration and hosting.',
+      //   src:
+      //     '../../assets/img/uxbyparis.png',
+      //   link: 'https://www.uxbyparis.com'
+      // },
       // {
       //   name: 'Project 6',
       //   desc:
