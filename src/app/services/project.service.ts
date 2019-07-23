@@ -8,15 +8,16 @@ export class ProjectService {
 
   getWorks() {
     return [
-      {
-        name: 'Hair-N-Paris',
-        desc:
-          // tslint:disable-next-line:max-line-length
-          'Complete Shopify eCommerce store with the implementation of products. Setup of store payment processing through Stripe and PayPal. Installed Fraud app to protect the client from at-risk orders.',
-        src:
-          '../../assets/img/hnp1.jpg',
-        link: 'https://www.hairnparis.com'
-      },
+      // {
+      //   name: 'Hair-N-Paris',
+      //   desc:
+      //     // tslint:disable-next-line:max-line-length
+      // tslint:disable-next-line:max-line-length
+      //     'Complete Shopify eCommerce store with the implementation of products. Setup of store payment processing through Stripe and PayPal. Installed Fraud app to protect the client from at-risk orders.',
+      //   src:
+      //     '../../assets/img/hnp1.jpg',
+      //   link: 'https://www.hairnparis.com'
+      // },
       {
         name: 'Brooklyn Banking',
         desc:
@@ -127,15 +128,15 @@ export class ProjectService {
           // tslint:disable-next-line:max-line-length
           'I hired Envizn to create a demo mobile banking app for my company and I was blown away by the quality of work, the professionalism, and the speed of project delivery. ',
         author: 'Nick',
-        company: 'General Electric',
+        company: 'Asaro',
         image: 'assets/img/profile/adam.jpg'
       },
       {
         text:
           // tslint:disable-next-line:max-line-length
-          'Amazing work Envizn! I absolutely love my Wix website. I will be returning to have you guys create and design content for my social media accounts. I could not have asked for better.',
+          'Amazing work Envizn! I absolutely love my website. I will be returning to have you guys create and design content for my social media accounts. I could not have asked for better.',
         author: 'Hidi',
-        company: 'Dell EMC',
+        company: 'Deus Performance',
         image: 'assets/img/profile/ashley.jpg'
       },
       {
@@ -143,7 +144,7 @@ export class ProjectService {
           // tslint:disable-next-line:max-line-length
           'Envizn has the best customer service I’ve ever experienced. There is always a positive interaction when speaking to members of their team. I can\'t help but smile when I contact them because they truly make me feel like family. The employees are super friendly, and you immediately form a connection with them.',
         author: 'Vernon',
-        company: 'Southwest Airlines',
+        company: 'Cool Club',
         image: 'assets/img/profile/bruno.jpg'
       },
       {
