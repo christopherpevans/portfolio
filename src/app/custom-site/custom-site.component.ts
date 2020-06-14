@@ -13,8 +13,8 @@ export class CustomSiteComponent implements OnInit {
       price: 1000,
       desc: 'Simplest package to get you started',
       cards: '100 business cards',
-      storage: '50 GB',
-      support: false,
+      pages: '5 pages',
+      website: 'Custom Website',
       ssl: false
     },
     {
@@ -22,8 +22,8 @@ export class CustomSiteComponent implements OnInit {
       price: 3000,
       desc: 'The most popular package we offer',
       cards: '200 business cards',
-      storage: '500 Gb',
-      support: false,
+      pages: '10 pages',
+      website: 'Custom Website',
       ssl: false
     },
     {
@@ -31,8 +31,8 @@ export class CustomSiteComponent implements OnInit {
       price: 8000,
       desc: 'Perfect for your small business.',
       cards: '500 business cards',
-      storage: '1 TB',
-      support: true,
+      pages: '20 pages',
+      website: 'Custom Website',
       ssl: false
     },
     {
@@ -40,8 +40,8 @@ export class CustomSiteComponent implements OnInit {
       price: 12000,
       desc: 'Our most advanced & complete package',
       cards: '1000 business cards',
-      storage: 'Unlimited',
-      support: true,
+      pages: 'Unlimited',
+      website: 'Custom Website',
       ssl: true
     }
   ];

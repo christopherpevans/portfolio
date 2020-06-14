@@ -13,8 +13,8 @@ export class WixComponent implements OnInit {
       price: 300,
       desc: 'Simplest package to get you started',
       cards: '100 business cards',
-      storage: '50 GB',
-      support: false,
+      website: 'Wix Website',
+      special: '1 page with 5 sections',
       ssl: false
     },
     {
@@ -22,8 +22,8 @@ export class WixComponent implements OnInit {
       price: 600,
       desc: 'The most popular package we offer',
       cards: '200 business cards',
-      storage: '500 Gb',
-      support: false,
+      website: 'Wix Website',
+      special: '5 pages',
       ssl: false
     },
     {
@@ -31,8 +31,8 @@ export class WixComponent implements OnInit {
       price: 1500,
       desc: 'Perfect for your small business.',
       cards: '500 business cards',
-      storage: '1 TB',
-      support: true,
+      website: 'Wix Website',
+      special: 'Up to 50 products',
       ssl: false
     },
     {
@@ -40,8 +40,8 @@ export class WixComponent implements OnInit {
       price: 2500,
       desc: 'Our most advanced & complete package',
       cards: '1000 business cards',
-      storage: 'Unlimited',
-      support: true,
+      website: 'Wix Website',
+      special: 'Unlimited products',
       ssl: true
     }
   ];
